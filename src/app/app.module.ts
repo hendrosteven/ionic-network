@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PostService } from '../services/post-service';
+import { PhotoService } from '../services/photo-service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { PostService } from '../services/post-service';
     HomePage
   ],
   imports: [
-    HttpModule,
+  HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -28,7 +29,8 @@ import { PostService } from '../services/post-service';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    PostService
+    PostService,
+    PhotoService
   ]
 })
 export class AppModule {}
